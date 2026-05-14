@@ -1,0 +1,290 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currículo - Thomas Andrew</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .header h2 {
+      font-size: 18px;
+      color: #2563eb;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      font-size: 22px;
+      color: #111827;
+      margin-bottom: 12px;
+      border-left: 5px solid #2563eb;
+      padding-left: 12px;
+    }
+
+    .section p,
+    .section li {
+      font-size: 15px;
+      color: #374151;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .job,
+    .education {
+      margin-top: 15px;
+    }
+
+    .job-title,
+    .education-title {
+      font-weight: bold;
+      color: #111827;
+      font-size: 17px;
+    }
+
+    .date {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin: 5px 5px 0 0;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 25px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .header h2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>Thomas Andrew Schafer de Souza</h1>
+
+      <h2>
+        Desenvolvedor Full-Stack | SQL | C# | HTML CSS |
+        Automação | IA | Power BI
+      </h2>
+
+      <div class="contact">
+        Europa, Belo Horizonte - MG |
+        (31) 9 9358-9582 |
+        thommy.andrew21@gmail.com
+        <br><br>
+
+        <a href="https://github.com/ThmsAndrw" target="_blank">
+          github.com/ThmsAndrw
+        </a>
+        |
+        <a href="https://linkedin.com/in/thomas-a-schafer" target="_blank">
+          linkedin.com/in/thomas-a-schafer
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Sobre</h3>
+
+      <p>
+        Desenvolvedor com 2 anos de estudo buscando oportunidade
+        de estágio full-stack.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Highlights</h3>
+
+      <div class="badge">HTML</div>
+      <div class="badge">CSS</div>
+      <div class="badge">JavaScript</div>
+      <div class="badge">C#</div>
+      <div class="badge">SQL</div>
+      <div class="badge">MySQL</div>
+      <div class="badge">Power BI</div>
+      <div class="badge">N8N</div>
+      <div class="badge">Lovable AI</div>
+      <div class="badge">Pacote Office</div>
+
+      <ul>
+        <li>
+          Desenvolvimento de front-end com HTML, CSS e JavaScript.
+        </li>
+
+        <li>
+          Estruturação e análise de banco de dados com MySQL.
+        </li>
+
+        <li>
+          Lógica back-end com C#.
+        </li>
+
+        <li>
+          Desenvolvimento de planilhas, documentos e apresentações
+          com Microsoft Office.
+        </li>
+
+        <li>
+          Experiência em automação de processos com N8N.
+        </li>
+
+        <li>
+          Criação de Mini-SaaS com Lovable AI.
+        </li>
+
+        <li>
+          Análise de dados com Power BI.
+        </li>
+
+        <li>
+          Certificações de destaque de melhor aluno no segundo,
+          terceiro e quarto trimestre do curso.
+        </li>
+
+        <li>
+          Certificação de trabalho voluntário Code Club.
+        </li>
+
+        <li>
+          Inglês intermediário - nível B2.
+        </li>
+
+        <li>
+          Conhecimento em dispositivos eletrônicos,
+          Linux e Windows.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Experiência</h3>
+
+      <div class="job">
+        <div class="job-title">
+          Yapp.Rec - Estagiário
+        </div>
+
+        <span class="date">
+          Junho 2025 – Presente
+        </span>
+
+        <p>
+          Desenvolvimento de aplicativos internos com Lovable AI,
+          automação de processos com N8N, conexões com APIs de bancos
+          de dados e aplicativos externos, criação de dashboards com
+          Power BI e Metabase.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Educação</h3>
+
+      <div class="education">
+        <div class="education-title">
+          Curso Técnico em TI - Cotemig
+        </div>
+
+        <span class="date">
+          Fevereiro 2024 – Novembro 2026
+        </span>
+
+        <p>
+          Ensino médio técnico com foco em back-end com C#,
+          front-end com HTML, CSS e JavaScript, banco de dados
+          SQL com MySQL, robótica, manutenção de computadores,
+          comandos Linux e desenvolvimento de planilhas.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>"""
+
+if __name__ == '__main__':
+    app.run(debug=True)
