@@ -1,0 +1,10 @@
+{% extends "pai.html" %} {% block title %} Questão 5 {% endblock %} {% block content %} 
+Lista alunos: 
+{% for i in data.keys %} 
+    {{ i }}: {{ data[i] }}
+    {%{% if data[i]<6 %}
+        Reprovado
+    {% endif %}%}
+{% endfor %}
+
+{%endblock %}
