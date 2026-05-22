@@ -37,10 +37,10 @@ def q4():
 @app.route('/q5')
 def q5():
     data = {
-        'Thomas': "9",
-        'Victor': "3",
-        'Andrew': "7",
-        'Coxão': "10",
+        'Thomas': 9,
+        'Victor': 3,
+        'Andrew': 7,
+        'Coxão': 10,
     }
     
     return render_template('q5.html', data=data)
