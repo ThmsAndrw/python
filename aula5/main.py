@@ -13,8 +13,8 @@ def show_the_login_form():
     """)
 
 def do_the_login():
-    usuario = request.form.get('usuario')
-    senha = request.form.get('senha')
+    inputUsuario = request.form.get('usuario')
+    inputSenha = request.form.get('senha')
     
     usuarios = [
         {'usuario': 'dolga', 'senha': 'cotemig2026'},
@@ -23,13 +23,10 @@ def do_the_login():
     ]
 
     for usuario in usuarios:
-        if usuario == i and senha == usuarios[i]:
-            return f"<h1>Bem-vindo, {usuario}!</h1>"
-    
-    if usuario == 'admin' and senha == '123':
-        return f"<h1>Bem-vindo, {usuario}!</h1>"
-    else:
-        return "<h1>Login inválido</h1>"
+        if usuario['usuario'] == inputUsuario and usuario['senha'] == inputSenha:
+            return f"<h1>Bem-vindo, {usuario['usuario']}!</h1>"
+        else:
+            return "<h1>Login inválido</h1>"
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
