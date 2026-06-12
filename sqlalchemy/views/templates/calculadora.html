@@ -25,9 +25,9 @@
                     {% set op = request.form.get('operacao', '+') %}
                     <select id="operacao" name="operacao" required onchange="atualizarNum2()">
                         <option value="+" {% if op == '+' %}selected{% endif %}>+ Somar</option>
-                        <option value="-" {% if op == '-' %}selected{%  %}>− Subtrair</option> ??? 
+                        <option value="-" {% if op == '-' %}selected{% endif %}>− Subtrair</option>
                         <option value="*" {% if op == '*' %}selected{% endif %}>× Multiplicar</option>
-                        <option value="/" {% if op == '/' %}selected{%  %}>÷ Dividir</option> ???
+                        <option value="/" {% if op == '/' %}selected{% endif %}>÷ Dividir</option>
                         <option value="**" {% if op == '**' %}selected{% endif %}>^ Potência</option>
                         <option value="sqrt" {% if op == 'sqrt' %}selected{% endif %}>√ Raiz quadrada</option>
                     </select>
